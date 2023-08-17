@@ -1,0 +1,34 @@
+nav {
+  @apply flex flex-row relative;
+
+  ul {
+    @apply flex flex-row;
+    @apply text-sm max-md:text-xs;
+
+    li {
+      @apply flex flex-col h-8 justify-center leading-none;
+      @apply h-10 max-lg:h-8 max-sm:h-6;
+
+      a {
+        @apply h-full flex flex-row items-center px-6 rounded;
+        color: var(--theme-text-darker);
+        @apply transition ease-in-out;
+        @apply px-6 max-lg:px-4 max-sm:px-2;
+
+        &:hover {
+          color: var(--theme-text-lightest);
+        }
+
+        &:hover, &:focus {
+          @apply outline-none;
+        }
+
+        &.active-link {
+          @apply bg-slate-700;
+          color: var(--theme-text-lighter);
+          background-color: var(--theme-bg-darker);
+        }
+      }
+    }
+  }
+}
